@@ -1,0 +1,8 @@
+config.xml
+/hooks/
+/platforms/
+/plugins/
+www/bower_components/
+www/res/
+www/spec/
+/.cordova

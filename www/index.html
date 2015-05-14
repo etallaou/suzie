@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html data-ng-app="suzie">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Route Berechnung</title>
+    </head>
+    <body data-ng-controller="IndexController">  
+        <header class="row" data-ng-show="!displayMenu">
+            <div class="col-xs-6 pull-left  collapse-button">
+                <h2 data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-list"></span></h2>
+            </div>
+            <div class="col-xs-6  logo">
+              <h2 class="pull-right">  HHN </h2>
+            </div>
+        </header>
+        <header class="row" data-ng-show="displayMenu">
+            <div class="col-xs-6 pull-left  collapse-button">
+              <h2>Menü</h2>
+            </div>
+            <div class="col-xs-6 logo">
+                <h2 class="pull-right" data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-list"></span></h2>
+            </div>
+        </header>
+        <div class="row menu" data-ng-show="displayMenu">
+          <ul>
+            <li>
+                <a> Bonjour le monde </a>
+            </li>
+              <li>
+                <a> Je t'aime Cindy</a>
+            </li>
+          </ul>
+        </div>
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+         <script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </body>
+</html>
