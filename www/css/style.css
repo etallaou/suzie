@@ -25,12 +25,28 @@ header {
 	border-top: 2px solid #ccc;
 	padding-top: 1.5em;
 	border-bottom: 2px solid #ccc;
+	list-style: none;
+	text-decoration: none;
+}
+
+.menus ul li {
+	display: block;
+	height: 500px
+	border-top: 2px solid #ccc;
+	padding-top: 1.5em;
+	border-bottom: 2px solid #ccc;
+	list-style: none;
+	text-decoration: none;
 }
 
 .menu ul li a{
 	color: black;
 	font-weight: bold;
 	font-size: 2em;
+	text-decoration: none;
+	font-weight: bold;
+	text-shadow: black 1px 1px 4px
+	
 }
 .aktionbereich{
 	padding-top: 5em;

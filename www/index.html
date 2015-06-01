@@ -15,7 +15,7 @@
     <body data-ng-controller="IndexController">  
         <header class="row" data-ng-show="!displayMenu">
             <div class="col-xs-6 pull-left  collapse-button">
-                <h2 data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-list"></span></h2>
+                <h2 data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-align-justify"></h2>
             </div>
             <div class="col-xs-6  logo">
               <h2 class="pull-right">  HHN </h2>
@@ -26,21 +26,21 @@
               <h2>Menü</h2>
             </div>
             <div class="col-xs-6 logo">
-                <h2 class="pull-right" data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-list"></span></h2>
+                <h2 class="pull-right" data-ng-click="changeMenuState()"><span class="glyphicon glyphicon-align-justify"></h2>
             </div>
         </header>
         <div class="row menu" data-ng-show="displayMenu">
           <ul>
             <li>
-                <a>Routeberechnung </a>
+                <a href="routeberechnung.html">Routeberechnung </a>
             </li>
               <li>
-                <a>HHN Standorte</a>
+                <a href="standorte.html">HHN Standorte</a>
             </li>
           </ul>
         </div>
 
-     <div id="pos" style="width:600px; height:200px;" col-xs-12>
+    <div id="pos" style="width:600px; height:200px;" data-ng-show="!displayMenu" col-xs-12>
         Deine Position wird ermittelt...
     </div>
     
@@ -66,10 +66,9 @@
         }, function(){
             document.getElementById('pos').innerHTML = 'Deine Position konnte leider nicht ermittelt werden';
         });
-    </script>
+    </script>    
 
-    
-    <div class="col-xs-12" data-role="fieldcontain" aktionbereich>
+    <div class="col-xs-12" data-role="fieldcontain" aktionbereich data-ng-show="!displayMenu" >
         <label for="select-choice-1" class="select">Route Berechnen</label>
         <br>
         <select name="select-choice-1" id="select-choice-1">
